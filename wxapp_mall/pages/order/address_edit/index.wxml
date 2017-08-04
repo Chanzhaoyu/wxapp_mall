@@ -1,0 +1,60 @@
+<view class="container">
+    <view class="in-list">
+        <view class="in-item">
+            <view class="title">联系人</view>
+            <view class="in-item-info lineText">
+                <input type="text" value="" placeholder="名字"></input>
+            </view>
+        </view>
+        <view class="in-item">
+            <view class="title">手机号码</view>
+            <view class="in-item-info lineText">
+                <input type="number" value="" placeholder="11位手机号"></input>
+            </view>
+        </view>
+        <view class="in-item">
+            <view class="title">选择地区</view>
+            <view class="in-item-info">
+                <input type="text" value="{{areaInfo}}" placeholder=""></input>
+            </view>
+            <view class="iconfont icon-31dingwei" bindtap="selectArea"></view>
+        </view>
+        <view class="in-item">
+            <view class="title" style="align-self: flex-start;">详细地址</view>
+            <view class="in-item-info lineText">
+                <textarea class="information" value="" placeholder="街道门牌信息"></textarea>
+            </view>
+        </view>
+        <!-- <view class="in-item">
+            <view class="title">邮政编码</view>
+            <view class="in-item-info">
+                <input type="number" value="" placeholder="邮政编码"></input>
+            </view>
+        </view> -->
+    </view>
+    <view class="operation">
+        <button class="btn-default delete">删除</button>
+        <button class="btn-default confirm" type="primary">保存</button>
+    </view>
+</view>
+
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+    <view style="height:10% ;width:95%;margin-top:10rpx">
+        <text catchtap="cityCancel">取消</text>
+        <text style="float: right" catchtap="citySure">确定</text>
+    </view>
+    <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+        <picker-view-column>
+            <view wx:for="{{provinces}}" class="picker-item">
+                {{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{citys}}" class="picker-item" wx:key="">
+                {{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{areas}}" class="picker-item" wx:key="">
+                {{item.name}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

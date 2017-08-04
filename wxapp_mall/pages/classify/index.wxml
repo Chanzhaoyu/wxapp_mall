@@ -1,0 +1,22 @@
+<view class="classify-tab">
+  <scroll-view scroll-y class="nav-left">
+    <block wx:for="{{cateItems}}">
+      <view class="n-l-items {{curNav == item.cate_id ? 'active cor-16' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
+    </block>
+  </scroll-view>
+  <view class="nav-right">
+    <scroll-view scroll-y class="pro-wrap">
+      <block wx:if="{{cateItems[curIndex].ishaveChild}}">
+        <view class="n-r-items" wx:for="{{cateItems[curIndex].children}}">
+          <navigator url="/pages/product_view/index">
+            <image class="thumbnail" src="{{item.image}}"></image>
+            <text class="caption">{{item.name}}</text>
+          </navigator>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="no-information">暂无内容</view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

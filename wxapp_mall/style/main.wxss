@@ -1,0 +1,147 @@
+page { font: 14px/1.5 'Microsoft Yahei', Arial, sans-serif; color: #666; background: #f3f3f3; } 
+.container { display: flex; flex-direction: column; } 
+.main { padding: 20rpx; } 
+input { font-family: 'Microsoft Yahei', Arial, sans-serif; } 
+
+/*浮动*/
+.clearfix { zoom: 1; } 
+.clearfix:after { content: ""; display: block; height: 0; visibility: hidden; clear: both; } 
+.fl { float: left !important; } 
+.fr { float: right !important; } 
+.tl { text-align: left !important; } 
+.tc { text-align: center !important; } 
+.tr { text-align: right !important; } 
+
+/*字号*/
+.f10 { font-size: 20rpx; } 
+.f12 { font-size: 24rpx; } 
+.f14 { font-size: 28rpx; } 
+.f16 { font-size: 32rpx; } 
+.f18 { font-size: 36rpx; } 
+.f20 { font-size: 40rpx; } 
+.f24 { font-size: 48rpx; } 
+.f28 { font-size: 56rpx; } 
+.f36 { font-size: 72rpx; } 
+
+.ft-w { font-weight: 700; } 
+.ft-n { font-weight: normal; } 
+
+/*间距*/
+.mt5 { margin-top: 5px; } 
+.mt10 { margin-top: 20rpx; } 
+.mt15 { margin-top: 30rpx; } 
+.mt20 { margin-top: 40rpx; } 
+.mr5 { margin-right: 10rpx; } 
+.mr10 { margin-right: 20rpx; } 
+.mr15 { margin-right: 30rpx; } 
+.mr20 { margin-right: 40rpx; } 
+.ml5 { margin-left: 10rpx; } 
+.ml10 { margin-left: 20rpx; } 
+.ml15 { margin-left: 30rpx; } 
+.mb5 { margin-bottom: 10rpx; } 
+.mb10 { margin-bottom: 20rpx; } 
+.mb15 { margin-bottom: 30rpx; } 
+.mb20 { margin-bottom: 40rpx; } 
+.m10 { margin: 20rpx; } 
+.m15 { margin: 30rpx; } 
+.m20 { margin: 40rpx; } 
+.red { color: #e64340; } 
+.grey { color:#888; } 
+
+/*截字*/
+.lineText,.lineText2,.lineText3 { overflow: hidden; text-overflow: ellipsis; } 
+.lineText2,.lineText3 { display: -webkit-box; -webkit-box-orient: vertical; box-orient: vertical; } 
+.lineText { white-space: nowrap; } 
+.lineText2 { -webkit-line-clamp: 2; } 
+.lineText3 { -webkit-line-clamp: 3; } 
+
+/* flex */
+.flex { display: flex; flex-flow: row nowrap; } 
+.flex>.sub { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; overflow: hidden; } 
+.flexC { -webkit-flex-direction: column; flex-direction: column; } 
+
+.fixed-box { position: fixed; left: 0; top: 0; right: 0; bottom: 0; } 
+
+.btn-wrap { padding: 20rpx; } 
+.btn-default { color: #fff; } 
+
+/*按钮颜色*/
+.tem-1 { background-color: #a00b04 !important; } 
+.tem-2 { background-color: #a15605 !important; } 
+.tem-3 { background-color: #a07d05 !important; } 
+.tem-4 { background-color: #7da004 !important; } 
+.tem-5 { background-color: #20a003 !important; } 
+.tem-6 { background-color: #05a066 !important; } 
+.tem-7 { background-color: #0499a0 !important; } 
+.tem-8 { background-color: #037ea0 !important; } 
+.tem-9 { background-color: #0462a0 !important; } 
+.tem-10 { background-color: #a00350 !important; } 
+.tem-11 { background-color: #666 !important; } 
+.tem-12 { background-color: #663b69 !important; } 
+.tem-13 { background-color: #238143 !important; } 
+.tem-14 { background-color: #049f97 !important; } 
+.tem-15 { background-color: #425cbb !important; } 
+.tem-16 { background-color: #e64340 !important; } 
+
+/*边框颜色*/
+.bor-1 { border-color: #a00b04 !important; } 
+.bor-2 { border-color: #a15605 !important; } 
+.bor-3 { border-color: #a07d05 !important; } 
+.bor-4 { border-color: #7da004 !important; } 
+.bor-5 { border-color: #20a003 !important; } 
+.bor-6 { border-color: #05a066 !important; } 
+.bor-7 { border-color: #0499a0 !important; } 
+.bor-8 { border-color: #037ea0 !important; } 
+.bor-9 { border-color: #0462a0 !important; } 
+.bor-10 { border-color: #a00350 !important; } 
+.bor-11 { border-color: #666 !important; } 
+.bor-12 { border-color: #663b69 !important; } 
+.bor-13 { border-color: #238143 !important; } 
+.bor-14 { border-color: #049f97 !important; } 
+.bor-15 { border-color: #425cbb !important; } 
+.bor-16 { border-color: #e64340 !important; } 
+
+/*字体颜色*/
+.cor-1 { color: #a00b04 !important; } 
+.cor-2 { color: #a15605 !important; } 
+.cor-3 { color: #a07d05 !important; } 
+.cor-4 { color: #7da004 !important; } 
+.cor-5 { color: #20a003 !important; } 
+.cor-6 { color: #05a066 !important; } 
+.cor-7 { color: #0499a0 !important; } 
+.cor-8 { color: #037ea0 !important; } 
+.cor-9 { color: #0462a0 !important; } 
+.cor-10 { color: #a00350 !important; } 
+.cor-11 { color: #666 !important; } 
+.cor-12 { color: #663b69 !important; } 
+.cor-13 { color: #238143 !important; } 
+.cor-14 { color: #049f97 !important; } 
+.cor-15 { color: #425cbb !important; } 
+.cor-16 { color: #e64340 !important; } 
+
+/*轮播图片*/
+.swiper-wrap { height: 190px; } 
+.swiper-wrap image { width: 100%; height: 100%; vertical-align: top; } 
+
+/*无信息*/
+.no-information { width:100%; padding: 20rpx 0; text-align: center; text-shadow: 1px 1px 0 rgba(255,255, 255, 1); } 
+.no-information:before, .no-information:after { content: ""; display: inline-block; width: 60rpx; height: 2rpx; margin: 0 20rpx; background: #ddd; vertical-align: middle; } 
+
+/*左右分类组件*/
+.classify-tab { display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box; position:relative; width:100%; height:100%; background-color:#fff; } 
+.classify-tab .nav-left { display:inline-block; width:25%; height:100%; background:#f2f2f2; text-align:center; } 
+.classify-tab .n-l-items { height:84rpx; line-height:84rpx; line-height: 84rpx; text-align: center; font-size:24rpx; border-bottom: 2rpx solid #ddd; position: relative; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; } 
+.classify-tab .n-l-items.active { background:#fff; } 
+.classify-tab .nav-right { position:absolute; top:0; right:0; flex:1; width:75%; height:100%; background:#fff; } 
+.classify-tab .pro-wrap { padding: 20rpx 0; height: 100%; box-sizing:border-box; overflow: hidden; } 
+.classify-tab .n-r-items { float:left; width:33.33%; text-align:center; margin-bottom: 20rpx; padding: 8rpx 16rpx 0 16rpx; box-sizing: border-box; } 
+.classify-tab .n-r-items image { width:100%; height:180rpx; } 
+.classify-tab .n-r-items .caption { display:block; font-size: 24rpx; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; } 
+
+/*商品滑块组件*/
+.slide-module { padding: 20rpx 0; background: #fff; } 
+.slide-module .slide-wrap { height: 200rpx; white-space: nowrap; } 
+.slide-module .slide-item { display: inline-block; width: 26%; padding: 0 20rpx; margin-right: 20rpx; border-right: 1px solid #f2f2f2; height: 200rpx; position: relative; text-align: center; box-sizing: border-box; } 
+.slide-module .slide-item:last-child { margin-right: 0; border-right: 0; } 
+.slide-module .name { display: block; text-align: center; margin-bottom: 15rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } 
+.slide-module image { width: 100%; height: 144rpx; } 

@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="user-info">
+    <view class="info-wrap" bindtap="personaSettings">
+      <view class="my-img">
+        <image src="{{user.thumb}}"></image>
+      </view>
+      <view class="my-person-info lineText">{{user.name}}</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+  </view>
+  <view class="in-list">
+    <navigator class="in-item" url="/pages/order/address/index">
+      <view class="iconfont icon-31dingwei"></view>
+      <view class="in-item-info">收货地址</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <navigator class="in-item" url="/pages/order/order_list/index">
+      <view class="iconfont icon-31dingdan"></view>
+      <view class="in-item-info">我的订单</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <navigator class="in-item" url="">
+      <view class="iconfont icon-lingdang"></view>
+      <view class="in-item-info">系统通知</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <navigator class="in-item" url="">
+      <view class="iconfont icon-31hongbao"></view>
+      <view class="in-item-info">优惠券</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <navigator class="in-item" url="">
+      <view class="iconfont icon-31jifen"></view>
+      <view class="in-item-info">积分</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+  </view>
+
+  <view class="in-list">
+    <navigator class="in-item" url="">
+      <view class="iconfont icon-kefu"></view>
+      <view class="in-item-info">联系我们</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+  </view>
+</view>

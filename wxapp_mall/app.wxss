@@ -1,0 +1,88 @@
+@import "/style/main.wxss";
+@import "/style/font.wxss";
+/**app.wxss**/
+
+page { color: #666; } 
+.container { position: relative; } 
+.iconfont { font-size: 40rpx; } 
+
+/*菜单*/
+.menu-wrap { padding: 20rpx 0; background: #fff; margin-bottom: 20rpx; } 
+.menu-wrap .menu-item { width: 25%; display: inline-block; padding: 0 20rpx; box-sizing: border-box; } 
+.menu-wrap image { width: 100rpx; height: 100rpx; border-radius: 50%; } 
+.menu-wrap .menu-tx { margin: 10rpx 0; font-size: 32rpx; } 
+
+/*顶部搜索组*/
+.search-wrap { position: absolute; left: 0; top: 0; width: 100%; z-index: 999; } 
+.search-box { display: flex; width: 550rpx; height: 64rpx; align-items: center; background: rgba(255,255,255,.8); border-radius: 40rpx; padding: 0 20rpx; margin: 20rpx auto; box-sizing: border-box; } 
+.search-box .txt { flex: 1; text-align: center; color: #666; } 
+
+/*首页标题组*/
+.m-header { text-align: center; padding: 20rpx 0; background: #fff; border-bottom: 2rpx solid #f6f6f6; } 
+.m-header .iconfont { padding-right: 12rpx; vertical-align: -4rpx; } 
+.m-header .icon-31dianzan { color: #fea512; } 
+.m-header .icon-huore { color: #f35150; } 
+.m-header .title { color: #333; font-size: 32rpx; } 
+
+/*推荐产品*/
+.recommend-wrap { background: #fff; margin-bottom:20rpx; } 
+.recommend-main { white-space: nowrap; height: 384rpx; padding: 20rpx 0; } 
+.recommend-main .item { display: inline-block; width: 270rpx; height: 364rpx; padding: 0 20rpx; } 
+.recommend-main image { width: 100%; height: 230rpx; vertical-align: top; } 
+
+/*价格*/
+.pr-intro .name { height: 80rpx; padding: 20rpx 0 0; } 
+.pr-intro .price { color: #f35150; } 
+.pr-intro .num { font-weight: bold; } 
+
+/*首页热门产品*/
+.product-main { overflow: hidden; padding:20rpx 0 10rpx; } 
+.product-main .item { display: inline-block; width: 47%; padding: 10rpx; margin-left: 2%; margin-bottom: 2%; background: #fff; box-sizing: border-box; } 
+.product-main image { display: block; width: 100%; height: 350rpx; } 
+
+/*自定义区域*/
+.particular-wrap { background: #fff; } 
+.particular-wrap image { width: 100%; vertical-align: top; } 
+
+/*底部 Tips*/
+.tips-foot { padding:20rpx 0; position: relative; } 
+.tips-foot::after,.tips-foot::before { content:""; position: absolute; display: block; border-top: 1px solid #ececec; top: 50%; width: calc(50% - 160rpx); } 
+.tips-foot::after { left: 0; } 
+.tips-foot::before { right: 0; } 
+
+/*个人中心*/
+.user-info { padding: 60rpx; background: #f35150 url(../../../static/user-bg.png) no-repeat 0 100%; background-size: cover; } 
+.info-wrap { display: flex; justify-content: space-between; align-items: center; } 
+.my-img { width: 120rpx; height: 120rpx; border: 4rpx solid #fff; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 10rpx rgba(255,255,255,.2), 0 0 0 20rpx rgba(255,255,255,.1); } 
+.my-img image { width: 100%; height: 100%; } 
+.info-wrap .my-person-info { flex: 1; padding-left: 60rpx; color: #fff; font-size:32rpx; font-weight:700; } 
+.info-wrap .arrow { font-size: 42rpx; color: #f7f7f7; } 
+
+.in-list { background: #fff; margin-bottom: 20rpx; } 
+.in-item { display: flex; align-items: center; border-bottom: 2rpx solid #f5f5f5; padding: 0 20rpx; } 
+.in-item .in-item-info { flex: 1; } 
+.in-item .iconfont{  height: 80rpx; line-height: 80rpx; }
+.in-item .iconfont:first-child { margin-right: 20rpx; } 
+.in-item .title { width: 140rpx; margin-right: 20rpx; font-weight: 700; color: #333; } 
+.in-item .arrow { color: #ddd; } 
+
+.person-img { display: flex; padding: 20rpx 40rpx; align-items: center; background: #fff; margin: 20rpx 0;} 
+.person-img .img-wrap { flex: 1; } 
+.person-img .my-img { width: 160rpx; height: 160rpx; margin: auto; border: 0; box-shadow: none; } 
+.person-img .iconfont{ color: #ddd;}
+
+.picker{ height:1.4rem; min-height: 1.4rem; }
+
+/*订单*/
+.order-list { background: #fff; padding: 0 20rpx; color: #333; } 
+.ord-item { padding: 20rpx 0; border-bottom: 2rpx solid #f5f5f5; display: flex; justify-content: space-between; } 
+.ord-item .thumbnail { width: 120rpx; height: 120rpx; overflow: hidden; } 
+.ord-item .con { flex: 1; padding: 0 20rpx; } 
+.ord-item button { margin-left: 20rpx; line-height: 80rpx; } 
+.ord-item .cancel-btn { background: #fff; } 
+.ord-item .cancel-btn:after { border-color: #999; } 
+.ord-item .pay-btn { background: #e64340; color: #fff; } 
+.ord-item .pro-price { text-align: right; } 
+.ord-item .pro-price .price { font-size: 32rpx; } 
+.outher-info { display: flex; padding:5rpx 0; } 
+.outher-info .ot-intro { flex: 1; text-align: right; } 

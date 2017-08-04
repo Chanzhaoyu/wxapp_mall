@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="person-img" bindtap="bindPhoto">
+    <view class="img-wrap">
+      <view class="my-img">
+        <image src="{{user.thumb}}"></image>
+      </view>
+    </view>
+    <view class="arrow iconfont icon-31fanhui2"></view>
+  </view>
+  <view class="in-list">
+    <view class="in-item">
+      <view class="title">昵称</view>
+      <view class="in-item-info lineText">
+        <input type="text" value="{{user.name}}" bindinput="bindName"></input>
+      </view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+    <view class="in-item">
+      <view class="title">手机号</view>
+      <view class="in-item-info">
+        <input type="number" value="{{user.phone}}" bindinput="bindPhone"></input>
+      </view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+  </view>
+  <view class="main" bindtap="formSubmit">
+    <button type="primary">保存</button>
+  </view>
+</view>

@@ -1,0 +1,80 @@
+<view class="container">
+  <scroll-view scroll-y class="pr-view-main">
+    <swiper class="swiper-wrap" indicator-dots autoplay indicator-active-color="{{colorValue}}">
+      <block wx:for="{{slider}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="basic-info">
+      <view class="prod-title lineText2">
+        <view class="iconfont icon-vip"></view>宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+      <view class="prod-price-wrap">
+        <view class="dis-price">
+          <text class="dollar">￥</text>
+          <text class="price">24.90</text>
+        </view>
+        <view class="ori-price">￥28.00</view>
+      </view>
+      <view class="sales">
+        <view class="item">库存：99</view>
+        <view class="item">销量：99</view>
+      </view>
+    </view>
+    <view class="prod-main">
+      <view class="caption">商品详情</view>
+      <view class="con">
+        <image src="../../images/js.jpg" mode="widthFix"></image>
+        <image src="../../images/js2.jpg" mode="widthFix"></image>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="art-concern-btm">
+    <view class="concern-cart">
+      <view class="item" bindtap="makePhone" data-num="{{phone}}">
+        <view class="kf-line iconfont icon-31pinglun"></view>
+        <view class="title">客服</view>
+      </view>
+      <view class="item" bindtap="bind_go_cart">
+        <view class="iconfont icon-31gouwuche"></view>
+        <view class="title">购物车</view>
+        <!-- <view class="count">{{cart_default_number}}</view> -->
+      </view>
+    </view>
+    <view class="add-cart" bindtap="showCartBox">加入购物车</view>
+  </view>
+  <view class="add-cart-box fixed-box" wx:if="{{toggle}}">
+    <view class="layout">
+      <view class="close-wrap tr">
+        <view class="close-btn iconfont icon-guanbi2" bindtap="hideCartBox"></view>
+      </view>
+      <view class="layout-info">
+        <image src="../../images/pr1.jpg"></image>
+        <view class="pr-intro">
+          <view class="title lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+          <view class="price">￥24.90</view>
+        </view>
+      </view>
+      <view class="options">
+        <view class="options-tiem">
+          <view class="buy-num">库存：99</view>
+          <view class="count-set">
+            <view class="sub" bindtap="reduceCount">
+              <text class="iconfont icon-reduce-n"></text>
+            </view>
+            <view class="sub">
+              <input type="number" value="{{cart_default_number}}" disabled="{{disabled}}" class="buy-couts"></input>
+            </view>
+            <view class="sub" bindtap="addCount">
+              <text class="iconfont icon-add-n"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <button class="add-cart-btn" bindtap="goods_add_cart">加入购物车</button>
+    </view>
+    <view class="mask"></view>
+  </view>
+</view>

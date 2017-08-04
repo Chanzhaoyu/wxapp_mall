@@ -1,0 +1,517 @@
+<view class="container">
+  <scroll-view class="swiper-tab" scroll-x="true">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on bor-16' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on bor-16' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on bor-16' : ''}}" data-current="2" bindtap="swichNav">待发货</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on bor-16' : ''}}" data-current="3" bindtap="swichNav">待收货</view>
+  </scroll-view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height: {{wHeight - 46}}px">
+
+    <swiper-item>
+      <scroll-view scroll-y class="m-project">
+        <view class="order-tab">
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X2</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>当前状态：</text>
+                  <text class="ot-intro red ft-w">待发货</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="pay-btn">确认收货</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>当前状态：</text>
+                  <text class="ot-intro red ft-w">已关闭</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y class="m-project">
+        <view class="order-tab">
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="cancel-btn">取消订单</button>
+                <button size="mini" class="pay-btn">立即支付</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y class="m-project">
+        <view class="order-tab">
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>当前状态：</text>
+                  <text class="ot-intro red ft-w">待发货</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y class="m-project">
+        <view class="order-tab">
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="pay-btn">确认收货</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="pay-btn">确认收货</button>
+              </view>
+            </view>
+          </view>
+          <view class="order-list">
+            <block>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+              <view class="ord-item">
+                <image class="thumbnail" src="../../../images/p1.png"></image>
+                <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+                <view class="pro-price">
+                  <view class="price">￥99</view>
+                  <view class="count">X1</view>
+                </view>
+              </view>
+            </block>
+            <view class="ord-item">
+              <view class="con">
+                <view class="outher-info">
+                  <text>实付价格：</text>
+                  <text class="ot-intro red ft-w">￥279.00</text>
+                </view>
+              </view>
+            </view>
+            <view class="ord-item">
+              <view class="con tr">
+                <button size="mini" class="pay-btn">确认收货</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+</view>

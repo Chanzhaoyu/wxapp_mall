@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="person-img" bindtap="choosePic">
+    <view class="img-wrap">
+      <view class="my-img">
+        <image src="{{img}}"></image>
+      </view>
+    </view>
+    <view class="arrow iconfont icon-31fanhui2"></view>
+  </view>
+  <view class="in-list">
+    <view class="in-item">
+      <view class="title">昵称</view>
+      <view class="in-item-info lineText">
+        <input type="txt" value="漫漫一只鱼"></input>
+      </view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+    <view class="in-item">
+      <view class="title">性别</view>
+      <view class="in-item-info">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+    <view class="in-item">
+      <view class="title">手机号</view>
+      <view class="in-item-info">
+        <input type="number" value="13169579266"></input>
+      </view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+  </view>
+  <view class="main">
+    <button type="primary">保存</button>
+  </view>
+</view>

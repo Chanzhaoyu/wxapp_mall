@@ -1,0 +1,2 @@
+.order-info { padding: 20rpx; background: #525961; color: #fff; line-height: 1.8; font-size: 32rpx; } 
+.in-list { margin: 20rpx 0; } 

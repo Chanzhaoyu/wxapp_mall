@@ -1,0 +1,70 @@
+<view class="container">
+  <view class="order-info">
+    <view class="order-status">订单状态：待付款</view>
+    <view class="order-number">订单号：987159125472387</view>
+  </view>
+  <view class="in-list" bindtap="selectAddress">
+    <view class="in-item">
+      <view class="in-item-info">添加地址</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+  </view>
+  <view class="order-list">
+    <block>
+      <view class="ord-item">
+        <image class="thumbnail" src="../../../images/p1.png"></image>
+        <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+        <view class="pro-price">
+          <view class="price">￥99</view>
+          <view class="count">X1</view>
+        </view>
+      </view>
+      <view class="ord-item">
+        <image class="thumbnail" src="../../../images/p1.png"></image>
+        <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+        <view class="pro-price">
+          <view class="price">￥99</view>
+          <view class="count">X1</view>
+        </view>
+      </view>
+      <view class="ord-item">
+        <image class="thumbnail" src="../../../images/p1.png"></image>
+        <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+        <view class="pro-price">
+          <view class="price">￥99</view>
+          <view class="count">X1</view>
+        </view>
+      </view>
+    </block>
+    <view class="ord-item">
+      <view class="con">
+        <view class="outher-info">
+          <text>商品总额：</text>
+          <text class="ot-intro">￥297.00</text>
+        </view>
+        <view class="outher-info">
+          <text>物流费用：</text>
+          <text class="ot-intro">￥0.00</text>
+        </view>
+      </view>
+    </view>
+    <view class="ord-item">
+      <view class="con">
+        <view class="outher-info">
+          <text>下单时间：</text>
+          <text class="ot-intro">2017-08-03 13:36:20</text>
+        </view>
+        <view class="outher-info">
+          <text>实付价格：</text>
+          <text class="ot-intro red ft-w">￥279.00</text>
+        </view>
+      </view>
+    </view>
+    <view class="ord-item">
+      <view class="con tr">
+        <button size="mini" class="cancel-btn">取消订单</button>
+        <button size="mini" class="pay-btn">立即支付</button>
+      </view>
+    </view>
+  </view>
+</view>

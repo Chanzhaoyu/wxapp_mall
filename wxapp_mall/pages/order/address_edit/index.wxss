@@ -1,0 +1,8 @@
+.in-item { padding: 20rpx; border-bottom: 2rpx solid #f5f5f5; height: auto; } 
+.operation { text-align: center; } 
+.operation button { display: inline-block; width: 45%; margin: 0 2%; font-size: 32rpx; } 
+.operation .delete { background: #e64340; } 
+.information { width: 100%; height: 90rpx; } 
+
+.picker-view { width: 100%; display: flex; z-index:12; background-color: #fff; flex-direction: column; justify-content: center; align-items: center; position: fixed; bottom: 0rpx; left: 0rpx; height: 40vh; } 
+.picker-item { line-height: 70rpx; margin-left: 5rpx; margin-right: 5rpx; text-align: center; } 
