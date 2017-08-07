@@ -34,7 +34,7 @@
     </view>
     <view class="operation">
         <!-- <button class="btn-default delete">删除</button> -->
-        <button class="btn-default confirm" type="primary" bindtap="formSubmit">保存</button>
+        <button class="btn-default confirm tem-16" type="primary" bindtap="formSubmit">保存</button>
     </view>
 </view>
 
