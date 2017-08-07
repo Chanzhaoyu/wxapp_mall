@@ -1,14 +1,26 @@
-var address = require('../../../utils/city.js')
-
+let address = require('../../../utils/city.js');
 Page({
   data: {
-    animationAddressMenu: {},
     addressMenuIsShow: false,
     value: [0, 0, 0],
     provinces: [],
     citys: [],
     areas: [],
-    areaInfo: ''
+    addressInfo: {}
+  },
+  onReady: function () {
+    let that = this;
+    let addressValue = wx.getStorageSync('addressValue');
+    if (addressValue) {
+      wx.getStorage({
+        key: 'addressValue',
+        success: function (res) {
+          that.setData({
+            addressInfo: res.data
+          })
+        }
+      })
+    }
   },
   onLoad: function (options) {
     var id = address.provinces[0].id
@@ -38,12 +50,12 @@ Page({
     var areaInfo = that.data.provinces[value[0]].name + ',' + that.data.citys[value[1]].name + ',' + that.data.areas[value[2]].name
     that.setData({
       areaInfo: areaInfo,
-      addressMenuIsShow: false
+      addressMenuIsShow: false,
+      'addressInfo.area': areaInfo
     })
   },
   // 处理省市县联动逻辑
   cityChange: function (e) {
-    console.log(e)
     var value = e.detail.value
     var provinces = this.data.provinces
     var citys = this.data.citys
@@ -72,6 +84,58 @@ Page({
         value: [provinceNum, cityNum, countyNum]
       })
     }
-    console.log(this.data)
+  },
+  bindName: function (e) {
+    this.setData({
+      'addressInfo.name': e.detail.value
+    })
+  },
+  bindTel: function (e) {
+    this.setData({
+      'addressInfo.tel': e.detail.value
+    })
+  },
+  bindIntro: function (e) {
+    this.setData({
+      'addressInfo.addre': e.detail.value
+    });
+  },
+  formSubmit: function (e) {
+    let that = this;
+    let wran = '';
+    let flag = false;
+    if (!that.data.addressInfo.name) {
+      wran = '请填写联系人';
+    } else if (!that.data.addressInfo.tel) {
+      wran = '请填写手机号码';
+    } else if (!(/^1(3|4|5|7|8)\d{9}$/.test(that.data.addressInfo.tel))) {
+      wran = '手机号码格式不正确';
+    } else if (!that.data.addressInfo.area) {
+      wran = '请选择地区';
+    } else if (!that.data.addressInfo.addre) {
+      wran = '请填写详细地址';
+    } else {
+      flag = true;
+      wx.setStorage({
+        key: 'addressValue',
+        data: that.data.addressInfo,
+        success() {
+          // wx.navigateBack();
+          wx.showLoading({
+            title: '保存中...',
+          })
+          setTimeout(function () {
+            wx.hideLoading()
+          }, 1000)
+        }
+      })
+    }
+    if (flag == false) {
+      wx.showModal({
+        title: '提示',
+        content: wran,
+        showCancel: false
+      })
+    }
   }
 })

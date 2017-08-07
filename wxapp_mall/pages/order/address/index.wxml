@@ -1,10 +1,10 @@
 <view class="container">
     <view class="in-list">
         <block>
-            <view class="in-item" wx:for="{{address}}">
+            <view class="in-item" wx:for="{{address}}" data-index="{{item.index}}">
                 <view class="in-item-info">
-                    <view class="name">{{item.name}} {{item.phone}}</view>
-                    <view class="address">{{item.add}}</view>
+                    <view class="name">{{item.name}} {{item.tel}}</view>
+                    <view class="address">{{item.addre}}</view>
                 </view>
                 <view class="iconfont icon-31qiandao" bindtap="toAddressEdit"></view>
             </view>

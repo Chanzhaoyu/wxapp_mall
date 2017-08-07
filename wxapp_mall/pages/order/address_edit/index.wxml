@@ -3,26 +3,26 @@
         <view class="in-item">
             <view class="title">联系人</view>
             <view class="in-item-info lineText">
-                <input type="text" value="" placeholder="名字"></input>
+                <input type="text" value="{{addressInfo.name}}" placeholder="名字" bindinput="bindName"></input>
             </view>
         </view>
         <view class="in-item">
             <view class="title">手机号码</view>
             <view class="in-item-info lineText">
-                <input type="number" value="" placeholder="11位手机号"></input>
+                <input type="number" value="{{addressInfo.tel}}" placeholder="11位手机号" bindinput="bindTel"></input>
             </view>
         </view>
         <view class="in-item">
             <view class="title">选择地区</view>
             <view class="in-item-info">
-                <input type="text" value="{{areaInfo}}" placeholder=""></input>
+                <input type="text" value="{{addressInfo.area}}" placeholder="选择地区"></input>
             </view>
             <view class="iconfont icon-31dingwei" bindtap="selectArea"></view>
         </view>
         <view class="in-item">
             <view class="title" style="align-self: flex-start;">详细地址</view>
             <view class="in-item-info lineText">
-                <textarea class="information" value="" placeholder="街道门牌信息"></textarea>
+                <textarea class="information" value="{{addressInfo.addre}}" placeholder="街道门牌信息" bindinput="bindIntro"></textarea>
             </view>
         </view>
         <!-- <view class="in-item">
@@ -34,7 +34,7 @@
     </view>
     <view class="operation">
         <button class="btn-default delete">删除</button>
-        <button class="btn-default confirm" type="primary">保存</button>
+        <button class="btn-default confirm" type="primary" bindtap="formSubmit">保存</button>
     </view>
 </view>
 

@@ -1,42 +1,38 @@
+let li = [{
+  index: '0',
+  name: '赵小姐',
+  tel: '15818350398',
+  addre: '东莞市莞城学院路48号'
+}, {
+  index: '1',
+  name: '陈先生',
+  tel: '13169579266',
+  addre: '深圳市罗湖区莲塘7巷903'
+}, {
+  index: '2',
+  name: '左小姐',
+  tel: '15012745480',
+  addre: '深圳市南山区西丽珠光村'
+}];
+
 Page({
   data: {
-    address: [{
-      name: '赵小姐',
-      phone: '15818350398',
-      add: '东莞市莞城学院路48号'
-    }, {
-      name: '陈先生',
-      phone: '13169579266',
-      add: '深圳市罗湖区莲塘7巷903'
-    }, {
-      name: '左小姐',
-      phone: '15012745480',
-      add: '深圳市南山区西丽珠光村'
-    }]
+    address: li
   },
-  onLoad: function (options) {
-    //Do some initialize when page load.
-
-  },
-  onReady: function () {
-    //Do some when page ready.
-
-  },
-  onShow: function () {
-    //Do some when page show.
-
-  },
-  onHide: function () {
-    //Do some when page hide.
-
-  },
-  onUnload: function () {
-    //Do some when page unload.
-
-  },
-  onPullDownRefresh: function () {
-    //Do some when page pull down.
-
+  onload: function (options) {
+    let flag = false;
+    flag = options.flag;
+    if (flag) {
+      li.push({
+        'index': index++,
+        'name': options.name,
+        'tel': options.tel,
+        'addre': options.addrevalue
+      })
+      this.setData({
+        address: li
+      })
+    }
   },
   toAddressEdit: function () {
     wx.navigateTo({

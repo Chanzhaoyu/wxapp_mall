@@ -2,6 +2,7 @@
 Page({
   data: {
     companyInfo: {
+      info: '深圳市天助人和信息技术有限公司',
       person: '陈先生',
       tell: '020-00000000',
       mobile: '13169579266',

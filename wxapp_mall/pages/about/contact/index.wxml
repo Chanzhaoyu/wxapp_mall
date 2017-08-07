@@ -2,6 +2,9 @@
   <map class="map-control" id="myMap" longitude="{{lon}}" latitude="{{lat}}" markers="{{markers}}" scale="28" show-location></map>
   <view class="contact-group">
     <view class="item">
+      <text class="info ft-w">{{companyInfo.info}}</text>
+    </view>
+    <view class="item">
       <text class="name">联系人：</text>
       <text class="info">{{companyInfo.person}}</text>
     </view>
