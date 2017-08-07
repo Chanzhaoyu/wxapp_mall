@@ -1,7 +1,7 @@
 <view class="container">
   <view class="order-info">
-    <view class="order-status">订单状态：待付款</view>
-    <view class="order-number">订单号：987159125472387</view>
+    <view class="order-status">订单状态：{{orderStatus}}}</view>
+    <view class="order-number">订单号：{{orderNum}}</view>
   </view>
   <view class="in-list">
     <view wx:if="{{hasAddress}}" class="in-item" bindtap="editAddress">

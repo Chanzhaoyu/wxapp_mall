@@ -9,7 +9,7 @@
     </view>
   </view>
   <view class="in-list">
-    <navigator class="in-item" url="/pages/order/address/index">
+    <navigator class="in-item" url="/pages/order/address_edit/index">
       <view class="iconfont icon-31dingwei"></view>
       <view class="in-item-info">收货地址</view>
       <view class="arrow iconfont icon-31fanhui2"></view>
