@@ -1,1 +1,2 @@
-/* pages/about/about_us/index.wxss */
+.about-wrap { min-height: 100vh; background: #fff; padding: 20rpx; } 
+.thumbnail image { width: 100%; } 

@@ -19,7 +19,17 @@
       <view class="in-item-info">我的订单</view>
       <view class="arrow iconfont icon-31fanhui2"></view>
     </navigator>
-    <navigator class="in-item" url="">
+    <navigator class="in-item" url="/pages/about/about_us/index">
+      <view class="iconfont icon-31haoyou"></view>
+      <view class="in-item-info">关于我们</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <navigator class="in-item" url="/pages/about/contact/index">
+      <view class="iconfont icon-kefu"></view>
+      <view class="in-item-info">联系我们</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <!-- <navigator class="in-item" url="">
       <view class="iconfont icon-lingdang"></view>
       <view class="in-item-info">系统通知</view>
       <view class="arrow iconfont icon-31fanhui2"></view>
@@ -33,19 +43,6 @@
       <view class="iconfont icon-31jifen"></view>
       <view class="in-item-info">积分</view>
       <view class="arrow iconfont icon-31fanhui2"></view>
-    </navigator>
-  </view>
-
-  <view class="in-list">
-    <navigator class="in-item" url="/pages/about/about_us/index">
-      <view class="iconfont icon-31haoyou"></view>
-      <view class="in-item-info">关于我们</view>
-      <view class="arrow iconfont icon-31fanhui2"></view>
-    </navigator>
-    <navigator class="in-item" url="/pages/about/contact/index">
-      <view class="iconfont icon-kefu"></view>
-      <view class="in-item-info">联系我们</view>
-      <view class="arrow iconfont icon-31fanhui2"></view>
-    </navigator>
+    </navigator> -->
   </view>
 </view>

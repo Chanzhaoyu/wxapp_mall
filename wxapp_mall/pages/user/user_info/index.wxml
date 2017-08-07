@@ -24,6 +24,6 @@
     </view>
   </view>
   <view class="main" bindtap="formSubmit">
-    <button type="primary">保存</button>
+    <button class="btn-default tem-16">保存</button>
   </view>
 </view>

@@ -1,3 +1,28 @@
-<view class="container">
-    
+<view class="contact-wrap">
+  <map class="map-control" id="myMap" longitude="{{lon}}" latitude="{{lat}}" markers="{{markers}}" scale="28" show-location></map>
+  <view class="contact-group">
+    <view class="item">
+      <text class="name">联系人：</text>
+      <text class="info">{{companyInfo.person}}</text>
+    </view>
+    <view class="item">
+      <text class="name">电话：</text>
+      <text class="info">{{companyInfo.tell}}</text>
+    </view>
+    <view class="item">
+      <text class="name">手机：</text>
+      <text class="info">{{companyInfo.mobile}}</text>
+    </view>
+    <view class="item">
+      <text class="name">邮箱：</text>
+      <text class="info">{{companyInfo.email}}</text>
+    </view>
+    <view class="item">
+      <text class="name">地址：</text>
+      <text class="info">{{companyInfo.address}}</text>
+    </view>
+  </view>
+  <view class="u-button">
+    <button class="btn-default tem-16" data-tell="{{companyInfo.mobile}}" bindtap="makePhone">拨打电话</button>
+  </view>
 </view>
