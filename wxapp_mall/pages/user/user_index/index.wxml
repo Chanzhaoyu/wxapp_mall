@@ -37,7 +37,12 @@
   </view>
 
   <view class="in-list">
-    <navigator class="in-item" url="">
+    <navigator class="in-item" url="/pages/about/about_us/index">
+      <view class="iconfont icon-31haoyou"></view>
+      <view class="in-item-info">关于我们</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </navigator>
+    <navigator class="in-item" url="/pages/about/contact/index">
       <view class="iconfont icon-kefu"></view>
       <view class="in-item-info">联系我们</view>
       <view class="arrow iconfont icon-31fanhui2"></view>

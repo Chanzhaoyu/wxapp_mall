@@ -10,7 +10,9 @@
     "pages/order/order_list/index",
     "pages/order/address/index",
     "pages/order/address_edit/index",
-    "pages/user/user_info/index"
+    "pages/user/user_info/index",
+    "pages/about/about_us/index",
+    "pages/about/contact/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
