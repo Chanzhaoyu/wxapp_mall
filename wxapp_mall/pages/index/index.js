@@ -7,7 +7,8 @@ Page({
       '../../images/b3.png'
     ],
     color: '16',
-    colorValue: '#e64340'
+    colorValue: '#e64340',
+    toBottom: false
   },
   onLoad: function (options) {
 

@@ -215,10 +215,7 @@
       </view>
     </view>
   </view>
-
   <view class="particular-wrap">
     <image src="../../images/gd.png" mode="widthFix"></image>
   </view>
-
-  <view class="tips-foot tc grey">不要扯了，已经扯到底了</view>
 </view>
