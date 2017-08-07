@@ -1,6 +1,6 @@
 <view class="container">
   <view class="order-info">
-    <view class="order-status">订单状态：{{orderStatus}}}</view>
+    <view class="order-status">订单状态：{{orderStatus}}</view>
     <view class="order-number">订单号：{{orderNum}}</view>
   </view>
   <view class="in-list">
