@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/order/order_list/index",
     "pages/index/index",
     "pages/classify/index",
     "pages/cart/index",
     "pages/product_view/index",
     "pages/search/index",
     "pages/order/order_pay/index",
+    "pages/order/order_list/index",
     "pages/order/address/index",
     "pages/order/address_edit/index",
     "pages/user/user_index/index",
