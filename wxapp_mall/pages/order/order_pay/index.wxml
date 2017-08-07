@@ -3,9 +3,16 @@
     <view class="order-status">订单状态：待付款</view>
     <view class="order-number">订单号：987159125472387</view>
   </view>
-  <view class="in-list" bindtap="selectAddress">
-    <view class="in-item">
-      <view class="in-item-info">添加地址</view>
+  <view class="in-list">
+    <view wx:if="{{hasAddress}}" class="in-item" bindtap="editAddress">
+      <view class="in-item-info">选择地址</view>
+      <view class="arrow iconfont icon-31fanhui2"></view>
+    </view>
+    <view wx:else class="in-item address-wrap" bindtap="editAddress">
+      <view class="in-item-info">
+        <view>{{address.name}} {{address.tel}}</view>
+        <view>{{address.area}}{{address.addre}}</view>
+      </view>
       <view class="arrow iconfont icon-31fanhui2"></view>
     </view>
   </view>

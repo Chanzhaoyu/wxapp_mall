@@ -1,34 +1,28 @@
+let util = require('../../../utils/util.js');
+
 Page({
   data: {
-    
+    hasAddress: true,
+    address: {}
   },
-  onLoad: function(options) {
-    //Do some initialize when page load.
-    
+  onLoad: function () {
+    this.getAddress();
   },
-  onReady: function() {
-    //Do some when page ready.
-    
+  onShow: function(){
+    this.getAddress();
   },
-  onShow: function() {
-    //Do some when page show.
-    
-  },
-  onHide: function() {
-    //Do some when page hide.
-    
-  },
-  onUnload: function() {
-    //Do some when page unload.
-    
-  },
-  onPullDownRefresh: function() {
-    //Do some when page pull down.
-    
-  },
-  selectAddress: function(){
+  editAddress: function () {
     wx.navigateTo({
-      url: '/pages/order/address/index'
+      url: '/pages/order/address_edit/index'
+    })
+  },
+  getAddress: function () {
+    let that = this;
+    util.getCache('addressValue', function (res) {
+      that.setData({
+        hasAddress: false,
+        address: res
+      })
     })
   }
 })

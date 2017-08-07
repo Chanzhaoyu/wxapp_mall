@@ -1,5 +1,0 @@
-.in-item { padding: 30rpx 20rpx; height: auto; } 
-.name { color: #333; font-weight: 700; } 
-.address { color: #999; } 
-.new-address { padding: 20rpx ; color: #2494f9; } 
-.new-address .iconfont { vertical-align: middle; } 

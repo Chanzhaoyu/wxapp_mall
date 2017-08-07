@@ -1,4 +1,6 @@
 let address = require('../../../utils/city.js');
+let util = require('../../../utils/util.js');
+
 Page({
   data: {
     addressMenuIsShow: false,
@@ -8,22 +10,19 @@ Page({
     areas: [],
     addressInfo: {}
   },
-  onReady: function () {
-    let that = this;
-    let addressValue = wx.getStorageSync('addressValue');
-    if (addressValue) {
-      wx.getStorage({
-        key: 'addressValue',
-        success: function (res) {
-          that.setData({
-            addressInfo: res.data
-          })
-        }
-      })
-    }
+  onReady: function (options) {
+
   },
   onLoad: function (options) {
-    var id = address.provinces[0].id
+    let id = address.provinces[0].id;
+    let that = this;
+    let num = options.aId;
+    util.getCache('addressValue', function (res) {
+      console.log(res);
+      that.setData({
+        addressInfo: res
+      })
+    })
     this.setData({
       provinces: address.provinces,
       citys: address.citys[id],
@@ -47,7 +46,7 @@ Page({
     var city = that.data.city
     var value = that.data.value
     // 将选择的城市信息显示到输入框
-    var areaInfo = that.data.provinces[value[0]].name + ',' + that.data.citys[value[1]].name + ',' + that.data.areas[value[2]].name
+    var areaInfo = that.data.provinces[value[0]].name + that.data.citys[value[1]].name + that.data.areas[value[2]].name
     that.setData({
       areaInfo: areaInfo,
       addressMenuIsShow: false,
@@ -120,13 +119,13 @@ Page({
         key: 'addressValue',
         data: that.data.addressInfo,
         success() {
-          // wx.navigateBack();
           wx.showLoading({
             title: '保存中...',
           })
           setTimeout(function () {
-            wx.hideLoading()
-          }, 1000)
+            wx.hideLoading();
+            wx.navigateBack();
+          }, 2000)
         }
       })
     }

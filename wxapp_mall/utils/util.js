@@ -129,6 +129,19 @@ function viewMap(lat, lon, scale = '28') {
   })
 }
 
+// 获取缓存
+function getCache(key, success) {
+  let value = wx.getStorageSync(key);
+  if (value) {
+    wx.getStorage({
+      key: key,
+      success: function (res) {
+        success(res.data);
+      }
+    })
+  }
+}
+
 module.exports = {
   formatTime: formatTime,
   request: request,
@@ -141,5 +154,6 @@ module.exports = {
   viewMap: viewMap,
   splitParams: splitParams,
   getExtConfigs: getExtConfigs,
-  getCommand: getCommand
+  getCommand: getCommand,
+  getCache: getCache
 }
