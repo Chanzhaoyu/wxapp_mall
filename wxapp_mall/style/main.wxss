@@ -149,3 +149,25 @@ input { font-family: 'Microsoft Yahei', Arial, sans-serif; }
 /*文本内容区域*/
 .u-con-wrap { padding-top: 20rpx; color: #666; } 
 .u-con-wrap text { display: inline-block; text-indent: 2em; line-height: 1.8; margin-bottom: 20rpx; } 
+
+/*选项卡*/
+.swiper-tab { height: 90rpx; line-height: 90rpx; white-space: nowrap; background: #fff; border-bottom:1px solid #f7f7f7; } 
+.swiper-tab-list { display: inline-block; width: 25%; height: 90rpx; position: relative; text-align: center; font-size: 28rpx; box-sizing: border-box; border-bottom: 6rpx solid transparent; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } 
+.on-1 { color: #a00b04; border-bottom-color: #a00b04; } 
+.on-2 { color: #a15605; border-bottom-color: #a15605; } 
+.on-3 { color: #a07d05; border-bottom-color: #a07d05; } 
+.on-4 { color: #7da004; border-bottom-color: #7da004; } 
+.on-5 { color: #20a003; border-bottom-color: #20a003; } 
+.on-6 { color: #05a066; border-bottom-color: #05a066; } 
+.on-7 { color: #0499a0; border-bottom-color: #0499a0; } 
+.on-8 { color: #037ea0; border-bottom-color: #037ea0; } 
+.on-9 { color: #0462a0; border-bottom-color: #0462a0; } 
+.on-10 { color: #a00350; border-bottom-color: #a00350; } 
+.on-11 { color: #20a003; border-bottom-color: #20a003; } 
+.on-12 { color: #663b69; border-bottom-color: #663b69; } 
+.on-13 { color: #238143; border-bottom-color: #238143; } 
+.on-14 { color: #049f97; border-bottom-color: #049f97; } 
+.on-15 { color: #425cbb; border-bottom-color: #425cbb; } 
+.on-15 { color: #e64340; border-bottom-color: #e64340; } 
+.swiper-box { display: block; height: 100%; width: 100%; overflow: hidden; box-sizing: border-box; } 
+swiper-item scroll-view { height: 100%; } 

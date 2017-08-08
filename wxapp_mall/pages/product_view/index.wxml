@@ -1,5 +1,5 @@
 <view class="container">
-  <scroll-view scroll-y class="pr-view-main">
+  <view class="pr-view-main">
     <swiper class="swiper-wrap" indicator-dots autoplay indicator-active-color="{{colorValue}}">
       <block wx:for="{{slider}}" wx:key="{{index}}">
         <swiper-item>
@@ -30,7 +30,7 @@
         <image src="../../images/js2.jpg" mode="widthFix"></image>
       </view>
     </view>
-  </scroll-view>
+  </view>
   <view class="art-concern-btm">
     <view class="concern-cart">
       <view class="item" bindtap="bindGoIndex">

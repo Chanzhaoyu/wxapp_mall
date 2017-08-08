@@ -87,13 +87,11 @@ Page({
   },
   bindGoCart: function (event) {
     wx.navigateTo({
-      url: '/pages/index/index'
+      url: '/pages/cart/index'
     })
   },
   bindGoIndex: function (event) {
-    wx.redirectTo({
-      url: '/pages/index/index'
-    })
+    wx.navigateBack({delta: 2})
   },
   bindGoTop: function (event) {
     wx.pageScrollTo({
