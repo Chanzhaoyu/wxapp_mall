@@ -86,19 +86,16 @@ Page({
     });
   },
   bindGoCart: function (event) {
-    console.log(event)
     wx.navigateTo({
       url: '/pages/index/index'
     })
   },
   bindGoIndex: function (event) {
-    console.log(event)
     wx.redirectTo({
       url: '/pages/index/index'
     })
   },
   bindGoTop: function (event) {
-    console.log(event)
     wx.pageScrollTo({
       scrollTop: 0
     })

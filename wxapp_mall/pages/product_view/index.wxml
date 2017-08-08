@@ -34,11 +34,11 @@
   <view class="art-concern-btm">
     <view class="concern-cart">
       <view class="item" bindtap="bindGoIndex">
-        <view class="iconfont icon-31shouye"></view>
+        <view class="red iconfont icon-31shouye"></view>
         <view class="title">首页</view>
       </view>
       <view class="item" bindtap="makePhone" data-num="{{phone}}">
-        <view class="kf-line iconfont icon-31pinglun"></view>
+        <view class="red iconfont icon-31pinglun"></view>
         <view class="title">客服</view>
       </view>
 
