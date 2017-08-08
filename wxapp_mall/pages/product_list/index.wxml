@@ -1,11 +1,11 @@
 <view class="container">
     <view class="swiper-tab">
-        <view class="swiper-tab-list bor-16 cor-16}}" data-current="0" bindtap="swichNav">综合</view>
-        <view class="swiper-tab-list" data-current="1" bindtap="swichNav">新品</view>
-        <view class="swiper-tab-list" data-current="2" bindtap="swichNav">销量</view>
-        <view class="swiper-tab-list" data-current="3" bindtap="swichNav">价格</view>
+        <view class="swiper-tab-list {{this_g_nav == 0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">综合</view>
+        <view class="swiper-tab-list {{this_g_nav == 1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">新品</view>
+        <view class="swiper-tab-list {{this_g_nav == 2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">销量</view>
+        <view class="swiper-tab-list {{this_g_nav == 3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">价格</view>
     </view>
-    <view class="product-main">
+    <view class="product-main" wx:if="{{this_g_nav == 0}}">
         <view class="item">
             <navigator url="/pages/product_view/index">
                 <image src="../../images/p1.png"></image>
@@ -81,6 +81,110 @@
                 <image src="../../images/p6.png"></image>
                 <view class="pr-intro">
                     <view class="name lineText2">快餐</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="product-main" wx:if="{{this_g_nav == 1}}">
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p1.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">烧烤</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="product-main" wx:if="{{this_g_nav == 2}}">
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p1.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">烧烤</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p2.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">水果</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p3.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">小吃</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p4.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">甜品</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="product-main" wx:if="{{this_g_nav == 3}}">
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p1.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">烧烤</view>
+                    <view class="con">
+                        <view class="price">￥
+                            <text class="num">22.00</text>
+                        </view>
+                        <view class="volume">销量：99</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p2.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">水果</view>
                     <view class="con">
                         <view class="price">￥
                             <text class="num">22.00</text>

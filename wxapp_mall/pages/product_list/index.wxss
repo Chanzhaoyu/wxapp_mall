@@ -3,5 +3,7 @@
 .sr-group .con { flex: 1; display: flex; height: 70rpx; align-items: center; padding-left: 20rpx; } 
 .sr-group .con .txt { flex: 1; margin-left: 20rpx; font-size: 32rpx; } 
 .sr-group .sr-btn { width: 140rpx; height: 70rpx; line-height: 70rpx; text-align: center; background: #dfdfdf; } 
-
+.swiper-tab-list:after { content:""; display:inline-block; width:0; height:0; margin-left:5px; border:5px solid; border-color:transparent transparent #ccc transparent; -webkit-transform:translateY(-110%); transform:translateY(-110%); position:absolute; right:calc(50% - 60rpx); top:45rpx; -webkit-transform:translateY(-30%) rotate(180deg); transform:translateY(-30%) rotate(180deg); } 
+.on { color: #f35150; } 
+.on::after { border-bottom-color: #f35150; } 
 .product-main { background: #fff; } 
