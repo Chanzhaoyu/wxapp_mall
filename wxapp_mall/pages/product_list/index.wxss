@@ -1,0 +1,7 @@
+.sr-group { background: #f0eff5; padding: 20rpx 30rpx; } 
+.sr-group .sr-main { display: flex; background: #fff; border-radius: 10rpx; justify-content: space-between; overflow: hidden; } 
+.sr-group .con { flex: 1; display: flex; height: 70rpx; align-items: center; padding-left: 20rpx; } 
+.sr-group .con .txt { flex: 1; margin-left: 20rpx; font-size: 32rpx; } 
+.sr-group .sr-btn { width: 140rpx; height: 70rpx; line-height: 70rpx; text-align: center; background: #dfdfdf; } 
+
+.product-main { background: #fff; } 

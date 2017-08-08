@@ -1,0 +1,70 @@
+<view class="container">
+    <view class="product-main">
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p1.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">烧烤</view>
+                    <view class="price">￥
+                        <text class="num">22.00</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p2.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">水果</view>
+                    <view class="price">￥
+                        <text class="num">22.00</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p3.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">小吃</view>
+                    <view class="price">￥
+                        <text class="num">22.00</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p4.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">甜品</view>
+                    <view class="price">￥
+                        <text class="num">22.00</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p5.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">早餐</view>
+                    <view class="price">￥
+                        <text class="num">22.00</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator url="/pages/product_view/index">
+                <image src="../../images/p6.png"></image>
+                <view class="pr-intro">
+                    <view class="name lineText2">快餐</view>
+                    <view class="price">￥
+                        <text class="num">22.00</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
