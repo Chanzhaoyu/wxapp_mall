@@ -48,3 +48,6 @@ page, .container { height: 100%; }
 .concern-cart .iconfont { line-height: 1; } 
 .concern-cart .count { position: absolute; top: 8rpx; right: 40rpx; display: inline-block; padding: 0 8rpx; background: #e64340; color: #fff; border-radius: 16rpx; font-size: 20rpx; } 
 .add-cart { flex: 1; height: 100rpx; line-height: 100rpx; font-size: 36rpx; text-align: center; background: #e64340; color: #fff; } 
+
+.tool-wrap { position: fixed; right: 20rpx; bottom: 20%; } 
+.tool-item { width: 80rpx; height: 80rpx; line-height: 80rpx; margin-bottom: 20rpx; text-align: center; border-radius: 50%; background: #e64340; color: #fff;} 

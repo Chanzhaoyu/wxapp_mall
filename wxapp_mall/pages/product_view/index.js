@@ -25,11 +25,6 @@ Page({
       })
     }
   },
-  bind_go_cart: function () {
-    wx.redirectTo({
-      url: '../cart/index'
-    })
-  },
   num: 1,
   makePhone: function (e) {
     var num = e.currentTarget.dataset.num;
@@ -89,5 +84,23 @@ Page({
     that.setData({
       btn_add_cart_disabled: true
     });
+  },
+  bindGoCart: function (event) {
+    console.log(event)
+    wx.navigateTo({
+      url: '/pages/index/index'
+    })
+  },
+  bindGoIndex: function (event) {
+    console.log(event)
+    wx.redirectTo({
+      url: '/pages/index/index'
+    })
+  },
+  bindGoTop: function (event) {
+    console.log(event)
+    wx.pageScrollTo({
+      scrollTop: 0
+    })
   }
 })
