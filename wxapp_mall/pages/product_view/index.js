@@ -86,12 +86,14 @@ Page({
     });
   },
   bindGoCart: function (event) {
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/cart/index'
     })
   },
   bindGoIndex: function (event) {
-    wx.navigateBack({delta: 2})
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
   },
   bindGoTop: function (event) {
     wx.pageScrollTo({
