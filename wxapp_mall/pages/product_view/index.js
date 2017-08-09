@@ -6,7 +6,6 @@ Page({
       '../../images/pr2.jpg',
       '../../images/pr3.jpg'
     ],
-    phone: '',
     cart_default_number: 1,
     toggle: false,
     colorValue: '#e64340',
@@ -26,18 +25,6 @@ Page({
     }
   },
   num: 1,
-  makePhone: function (e) {
-    var num = e.currentTarget.dataset.num;
-    wx.makePhoneCall({
-      phoneNumber: num,
-      success: function (res) {
-        console.log('电话拨打成功');
-      },
-      fail: function (res) {
-        console.log('电话拨打失败');
-      }
-    })
-  },
   //显示加入购物车
   showCartBox: function () {
     this.setData({

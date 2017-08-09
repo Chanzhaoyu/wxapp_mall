@@ -37,8 +37,9 @@
         <view class="red iconfont icon-31shouye"></view>
         <view class="title">首页</view>
       </view>
-      <view class="item" bindtap="makePhone" data-num="{{phone}}">
-        <view class="red iconfont icon-31pinglun"></view>
+      <view class="item">
+        <contact-button type="default-dark" size="20" session-from="weapp">
+        </contact-button>
         <view class="title">客服</view>
       </view>
 
