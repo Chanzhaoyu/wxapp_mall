@@ -1,6 +1,5 @@
 .in-item { padding: 20rpx; border-bottom: 2rpx solid #f5f5f5; height: auto; } 
 .operation { padding: 20rpx; } 
-/* .operation button { display: inline-block; width: 45%; margin: 0 2%; font-size: 32rpx; }  */
 .operation .delete { background: #e64340; } 
 .information { width: 100%; height: 90rpx; } 
 
