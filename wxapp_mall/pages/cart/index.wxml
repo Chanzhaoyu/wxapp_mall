@@ -1,82 +1,45 @@
-<block wx:if="{{hasPro}}">
+<block wx:if="{{hasList}}">
     <view class="mallcart">
         <view class="mallcart-title flex">
-            <label class="radio">
-            <checkbox-group bindchange="all_checkboxChange">
-                <checkbox value="1" checked="{{all_is_checked}}"/>
-            </checkbox-group>
-        </label>
-            <view class="sub">全选</view>
-            <view class="mallcart-del grey f18" bindtap="bind_delete_cart">
+            <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll" />
+            <icon wx:else type="circle" bindtap="selectAll" />
+            <view class="sub ml10">全选</view>
+            <view class="mallcart-del grey f18" bindtap="deleteList">
                 <text class="iconfont icon-31shanchu"></text>
             </view>
         </view>
         <view class="cart-content">
-            <checkbox-group bindchange="single_checkboxChange">
-                <view class="cart-item flex">
-                    <label class="radio"><checkbox value="" checked="" /></label>
-                    <image src="../../images/pr1.jpg" mode="aspectFill" class="cart-img ml5 mr10"></image>
-                    <view class="cart-info sub">
-                        <text class="cart-title lineText2 mb5">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</text>
-                        <view class="price f18 red">￥99</view>
-                        <view class="count-set fr tc flex">
-                            <view class="sub" bindtap="bind_cart_number_jian">
-                                <text class="iconfont icon-reduce-n"></text>
-                            </view>
-                            <view class="sub"><input type="number" value="3" class="buy-couts" disabled="true" /></view>
-                            <view class="sub" bindtap="bind_cart_number_jia">
-                                <text class="iconfont icon-add-n"></text>
-                            </view>
+            <view class="cart-item flex" wx:for="{{carts}}">
+                <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" bindtap="selectList" />
+                <icon wx:else type="circle" data-index="{{index}}" bindtap="selectList" />
+                <navigator url="/pages/product_view/index" hover-class="none">
+                    <image src="{{item.image}}" mode="aspectFill" class="cart-img ml10 mr10"></image>
+                </navigator>
+                <view class="cart-info sub">
+                    <text class="cart-title lineText2 mb5">{{item.title}}</text>
+                    <view class="price f18 red">￥{{item.price}}</view>
+                    <view class="count-set fr tc flex">
+                        <view class="sub" bindtap="minusCount" data-index="{{index}}">
+                            <text class="iconfont icon-reduce-n"></text>
+                        </view>
+                        <view class="sub"><input type="number" value="{{item.num}}" class="buy-couts" disabled="true" /></view>
+                        <view class="sub" bindtap="addCount" data-index="{{index}}">
+                            <text class="iconfont icon-add-n"></text>
                         </view>
                     </view>
                 </view>
-                <view class="cart-item flex">
-                    <label class="radio"><checkbox value="" checked=""/></label>
-                    <image src="../../images/pr1.jpg" mode="aspectFill" class="cart-img ml5 mr10"></image>
-                    <view class="cart-info sub">
-                        <text class="cart-title lineText2 mb5">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</text>
-                        <view class="price f18 red">￥99</view>
-                        <view class="count-set fr tc flex">
-                            <view class="sub" bindtap="bind_cart_number_jian">
-                                <text class="iconfont icon-reduce-n"></text>
-                            </view>
-                            <view class="sub"><input type="number" value="3" class="buy-couts" disabled="true" /></view>
-                            <view class="sub" bindtap="bind_cart_number_jia">
-                                <text class="iconfont icon-add-n"></text>
-                            </view>
-                        </view>
-                    </view>
-                </view>
-                <view class="cart-item flex">
-                    <label class="radio"><checkbox value="" checked=""/></label>
-                    <image src="../../images/pr1.jpg" mode="aspectFill" class="cart-img ml5 mr10"></image>
-                    <view class="cart-info sub">
-                        <text class="cart-title lineText2 mb5">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</text>
-                        <view class="price f18 red">￥99</view>
-                        <view class="count-set fr tc flex">
-                            <view class="sub" bindtap="bind_cart_number_jian">
-                                <text class="iconfont icon-reduce-n"></text>
-                            </view>
-                            <view class="sub"><input type="number" value="3" class="buy-couts" disabled="true" /></view>
-                            <view class="sub" bindtap="bind_cart_number_jia">
-                                <text class="iconfont icon-add-n"></text>
-                            </view>
-                        </view>
-                    </view>
-                </view>
-            </checkbox-group>
+            </view>
         </view>
     </view>
     <!--底部浮动 start-->
     <view class="mallcart-foot flex">
-        <!-- <label class="radio"><checkbox value="" checked=""/></label> -->
         <view class="mall-cart-sum sub tr">
             <view>合计：
-                <text class="red f16">￥297</text>
+                <text class="red f16">￥{{totalPrice}}</text>
             </view>
-            <text class="f12 grey">(共3件商品)</text>
+            <text class="f12 grey">(共{{totalNum}}件商品)</text>
         </view>
-        <button class="mall-cart-btn ml10" bindtap="mallsure" disabled="">结算</button>
+        <button class="mall-cart-btn ml10" disabled="" bindtap="mallsure">结算</button>
     </view>
     <!--底部浮动 end-->
 </block>
