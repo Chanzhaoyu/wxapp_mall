@@ -29,6 +29,7 @@
       <view class="in-item-info">联系我们</view>
       <view class="arrow iconfont icon-31fanhui2"></view>
     </navigator>
+    
     <!-- <navigator class="in-item" url="">
       <view class="iconfont icon-lingdang"></view>
       <view class="in-item-info">系统通知</view>
@@ -44,5 +45,6 @@
       <view class="in-item-info">积分</view>
       <view class="arrow iconfont icon-31fanhui2"></view>
     </navigator> -->
+
   </view>
 </view>

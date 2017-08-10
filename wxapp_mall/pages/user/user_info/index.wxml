@@ -7,6 +7,7 @@
     </view>
     <view class="arrow iconfont icon-31fanhui2"></view>
   </view>
+
   <view class="in-list">
     <view class="in-item">
       <view class="title">昵称</view>
@@ -23,6 +24,7 @@
       <view class="arrow iconfont icon-31fanhui2"></view>
     </view>
   </view>
+  
   <view class="main" bindtap="formSubmit">
     <button class="btn-default tem-16">保存</button>
   </view>

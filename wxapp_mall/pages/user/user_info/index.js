@@ -19,6 +19,7 @@ Page({
         }
       })
     } else {
+      
       // 获取个人信息
       wx.getUserInfo({
         success: function (res) {

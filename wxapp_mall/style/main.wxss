@@ -59,7 +59,6 @@ input { font-family: 'Microsoft Yahei', Arial, sans-serif; }
 .flex { display: flex; flex-flow: row nowrap; } 
 .flex>.sub { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; overflow: hidden; } 
 .flexC { -webkit-flex-direction: column; flex-direction: column; } 
-
 .fixed-box { position: fixed; left: 0; top: 0; right: 0; bottom: 0; } 
 
 .btn-wrap { padding: 20rpx; } 

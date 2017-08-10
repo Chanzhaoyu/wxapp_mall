@@ -11,8 +11,8 @@
     "pages/order/address_edit/index",
     "pages/user/user_index/index",
     "pages/user/user_info/index",
-    "pages/about/about_us/index",
-    "pages/about/contact/index"
+    "pages/about/contact/index",
+    "pages/about/about_us/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

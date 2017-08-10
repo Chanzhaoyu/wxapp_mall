@@ -17876,7 +17876,6 @@ var areas = {
     "id": "820000"
   }]
 }
-
 module.exports = {
   citys,
   provinces,

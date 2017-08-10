@@ -1,6 +1,5 @@
 @import "/style/main.wxss"; 
 @import "/style/font.wxss"; 
-
 /**app.wxss**/
 page { color: #666; } 
 .container { position: relative; } 
