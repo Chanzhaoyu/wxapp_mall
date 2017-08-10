@@ -1,7 +1,7 @@
-@import "/style/main.wxss";
-@import "/style/font.wxss";
-/**app.wxss**/
+@import "/style/main.wxss"; 
+@import "/style/font.wxss"; 
 
+/**app.wxss**/
 page { color: #666; } 
 .container { position: relative; } 
 .iconfont { font-size: 40rpx; } 
@@ -10,7 +10,7 @@ page { color: #666; }
 .menu-wrap { padding: 20rpx 0; background: #fff; margin-bottom: 20rpx; } 
 .menu-wrap .menu-item { width: 25%; display: inline-block; padding: 0 20rpx; box-sizing: border-box; } 
 .menu-wrap image { width: 100rpx; height: 100rpx; border-radius: 50%; } 
-.menu-wrap .menu-tx { margin: 10rpx 0; font-size: 32rpx; } 
+.menu-wrap .menu-tx { margin: 10rpx 0; } 
 
 /*顶部搜索组*/
 .search-wrap { position: absolute; left: 0; top: 0; width: 100%; z-index: 999; } 

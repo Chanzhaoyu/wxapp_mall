@@ -19,49 +19,49 @@
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c1.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">小吃</view>
+        <view class="menu-tx lineText">小吃</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c2.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">甜品</view>
+        <view class="menu-tx lineText">甜品</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c3.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">早餐</view>
+        <view class="menu-tx lineText">早餐</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c4.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">水果</view>
+        <view class="menu-tx lineText">水果</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c1.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">小吃</view>
+        <view class="menu-tx lineText">小吃</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c2.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">甜品</view>
+        <view class="menu-tx lineText">甜品</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c3.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">早餐</view>
+        <view class="menu-tx lineText">早餐</view>
       </navigator>
     </view>
     <view class="menu-item tc">
       <navigator url="/pages/product_list/index">
         <image src="../../images/c4.png" class="menu-item-img"></image>
-        <view class="menu-tx lineText2">水果</view>
+        <view class="menu-tx lineText">水果</view>
       </navigator>
     </view>
   </view>
