@@ -1,13 +1,5 @@
 <block wx:if="{{hasList}}">
     <view class="mallcart">
-        <view class="mallcart-title flex">
-            <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll" />
-            <icon wx:else type="circle" bindtap="selectAll" />
-            <view class="sub ml10">全选</view>
-            <view class="mallcart-del grey f18" bindtap="deleteList">
-                <text class="iconfont icon-31shanchu"></text>
-            </view>
-        </view>
         <view class="cart-content">
             <view class="cart-item flex" wx:for="{{carts}}">
                 <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" bindtap="selectList" />
@@ -17,14 +9,19 @@
                 </navigator>
                 <view class="cart-info sub">
                     <text class="cart-title lineText2 mb5">{{item.title}}</text>
-                    <view class="price f18 red">￥{{item.price}}</view>
-                    <view class="count-set fr tc flex">
-                        <view class="sub" bindtap="minusCount" data-index="{{index}}">
-                            <text class="iconfont icon-reduce-n"></text>
+                    <view class="price red">￥{{item.price}}</view>
+                    <view class="control">
+                        <view class="count-set tc flex">
+                            <view class="sub" bindtap="minusCount" data-index="{{index}}">
+                                <text class="iconfont icon-reduce-n"></text>
+                            </view>
+                            <view class="sub"><input type="number" value="{{item.num}}" class="buy-couts" disabled="true" /></view>
+                            <view class="sub" bindtap="addCount" data-index="{{index}}">
+                                <text class="iconfont icon-add-n"></text>
+                            </view>
                         </view>
-                        <view class="sub"><input type="number" value="{{item.num}}" class="buy-couts" disabled="true" /></view>
-                        <view class="sub" bindtap="addCount" data-index="{{index}}">
-                            <text class="iconfont icon-add-n"></text>
+                        <view class="mallcart-del grey f18" bindtap="deleteList" data-index="{{index}}">
+                            <text class="iconfont icon-31shanchu"></text>
                         </view>
                     </view>
                 </view>
@@ -33,6 +30,11 @@
     </view>
     <!--底部浮动 start-->
     <view class="mallcart-foot flex">
+        <view class="sel-wrap">
+            <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll" />
+            <icon wx:else type="circle" bindtap="selectAll" />
+            <view class="sub ml10">全选</view>
+        </view>
         <view class="mall-cart-sum sub tr">
             <view>合计：
                 <text class="red f16">￥{{totalPrice}}</text>

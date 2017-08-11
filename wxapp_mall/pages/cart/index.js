@@ -105,14 +105,24 @@ Page({
     });
   },
   // 删除商品
-  deleteList: function () {
+  deleteList: function (e) {
     let that = this;
     let carts = this.data.carts;
-    that.setData({
-      carts: carts
-    });
-    this.getTotalPrice();
-    this.cartLength();
+    const index = e.currentTarget.dataset.index;
+    wx.showModal({
+      title: '提示',
+      content: '确定是删除选中商品？',
+      success: function (res) {
+        if (res.confirm) {
+          carts.splice(index, 1);
+        }
+        that.setData({
+          carts: carts
+        });
+      }
+    })
+    that.getTotalPrice();
+    that.cartLength();
   },
   //判断购物车有没有产品
   cartLength: function () {
