@@ -30,9 +30,9 @@
     </view>
     <!--底部浮动 start-->
     <view class="mallcart-foot flex">
-        <view class="sel-wrap">
-            <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll" />
-            <icon wx:else type="circle" bindtap="selectAll" />
+        <view class="sel-wrap" bindtap="selectAll">
+            <icon wx:if="{{selectAllStatus}}" type="success" color="red" />
+            <icon wx:else type="circle" />
             <view class="sub ml10">全选</view>
         </view>
         <view class="mall-cart-sum sub tr">
