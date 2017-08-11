@@ -3,9 +3,9 @@
         <view class="sr-main">
             <view class="con">
                 <view class="iconfont icon-sousuo"></view>
-                <input class="txt" type="text" placeholder="搜索..."></input>
+                <input class="txt" type="text" placeholder="搜索" bindinput="bindCon"></input>
             </view>
-            <view class="sr-btn">搜索</view>
+            <view class="sr-btn" data-key="{{keyWord}}" bindtap="search">搜索</view>
         </view>
     </view>
     <view class="product-main">
