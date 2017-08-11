@@ -5,7 +5,7 @@
                 <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" bindtap="selectList" />
                 <icon wx:else type="circle" data-index="{{index}}" bindtap="selectList" />
                 <navigator url="/pages/product_view/index" hover-class="none">
-                    <image src="{{item.image}}" mode="aspectFill" class="cart-img ml10 mr10"></image>
+                    <image src="{{item.image}}" class="cart-img ml10 mr10"></image>
                 </navigator>
                 <view class="cart-info sub">
                     <text class="cart-title lineText2 mb5">{{item.title}}</text>
@@ -31,7 +31,7 @@
     <!--底部浮动 start-->
     <view class="mallcart-foot flex">
         <view class="sel-wrap" bindtap="selectAll">
-            <icon wx:if="{{selectAllStatus}}" type="success" color="red" />
+            <icon wx:if="{{selectAllStatus}}" type="success" color="red"  />
             <icon wx:else type="circle" />
             <view class="sub ml10">全选</view>
         </view>

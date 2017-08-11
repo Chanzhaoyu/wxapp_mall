@@ -18,28 +18,12 @@
   </view>
   <view class="order-list">
     <block>
-      <view class="ord-item">
-        <image class="thumbnail" src="../../../images/p1.png"></image>
-        <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+      <view class="ord-item" wx:for="{{carts}}">
+        <image class="thumbnail" src="{{item.image}}"></image>
+        <view class="con lineText2">{{item.title}}</view>
         <view class="pro-price">
-          <view class="price">￥99</view>
-          <view class="count">X1</view>
-        </view>
-      </view>
-      <view class="ord-item">
-        <image class="thumbnail" src="../../../images/p1.png"></image>
-        <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
-        <view class="pro-price">
-          <view class="price">￥99</view>
-          <view class="count">X1</view>
-        </view>
-      </view>
-      <view class="ord-item">
-        <image class="thumbnail" src="../../../images/p1.png"></image>
-        <view class="con lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
-        <view class="pro-price">
-          <view class="price">￥99</view>
-          <view class="count">X1</view>
+          <view class="price">￥{{item.price}}</view>
+          <view class="count">X{{item.num}}</view>
         </view>
       </view>
     </block>
@@ -47,7 +31,7 @@
       <view class="con">
         <view class="outher-info">
           <text>商品总额：</text>
-          <text class="ot-intro">￥297.00</text>
+          <text class="ot-intro">￥{{totalPrice}}</text>
         </view>
         <view class="outher-info">
           <text>物流费用：</text>
@@ -59,11 +43,11 @@
       <view class="con">
         <view class="outher-info">
           <text>下单时间：</text>
-          <text class="ot-intro">2017-08-03 13:36:20</text>
+          <text class="ot-intro">{{dateNow}}</text>
         </view>
         <view class="outher-info">
           <text>实付价格：</text>
-          <text class="ot-intro red ft-w">￥279.00</text>
+          <text class="ot-intro red ft-w">￥{{totalPrice}}</text>
         </view>
       </view>
     </view>

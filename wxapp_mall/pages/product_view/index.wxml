@@ -1,7 +1,7 @@
 <view class="container">
   <view class="pr-view-main">
     <swiper class="swiper-wrap" indicator-dots autoplay indicator-active-color="{{colorValue}}">
-      <block wx:for="{{slider}}" wx:key="{{index}}">
+      <block wx:for="{{pro.slideshow}}" wx:key="{{index}}">
         <swiper-item>
           <image src="{{item}}" class="slide-image"></image>
         </swiper-item>
@@ -10,17 +10,17 @@
 
     <view class="basic-info">
       <view class="prod-title lineText2">
-        <view class="iconfont icon-vip"></view>宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
+        <view class="iconfont icon-vip"></view>{{pro.title}}</view>
       <view class="prod-price-wrap">
         <view class="dis-price">
           <text class="dollar">￥</text>
-          <text class="price">24.90</text>
+          <text class="price">{{pro.price}}</text>
         </view>
-        <view class="ori-price">￥28.00</view>
+        <view class="ori-price">￥{{pro.oldPrice}}</view>
       </view>
       <view class="sales">
-        <view class="item">库存：99</view>
-        <view class="item">销量：99</view>
+        <view class="item">库存：{{pro.repertory}}</view>
+        <view class="item">销量：{{pro.sales}}</view>
       </view>
     </view>
     <view class="prod-main">
@@ -52,21 +52,21 @@
         <view class="close-btn iconfont icon-guanbi2" bindtap="hideCartBox"></view>
       </view>
       <view class="layout-info">
-        <image src="../../images/pr1.jpg"></image>
+        <image src="{{pro.image}}"></image>
         <view class="pr-intro">
-          <view class="title lineText2">宏辉果蔬 苹果 烟台红富士 12个 单果约75mm 总重约2.1kg 新鲜水果</view>
-          <view class="price">￥24.90</view>
+          <view class="title lineText2">{{pro.title}}</view>
+          <view class="price">￥{{pro.price}}</view>
         </view>
       </view>
       <view class="options">
         <view class="options-tiem">
-          <view class="buy-num">库存：99</view>
+          <view class="buy-num">库存：{{pro.repertory}}</view>
           <view class="count-set">
             <view class="sub" bindtap="reduceCount">
               <text class="iconfont icon-reduce-n"></text>
             </view>
             <view class="sub">
-              <input type="number" value="{{cart_default_number}}" disabled="{{disabled}}" class="buy-couts"></input>
+              <input type="number" value="{{default_number}}" disabled="true" class="buy-couts"></input>
             </view>
             <view class="sub" bindtap="addCount">
               <text class="iconfont icon-add-n"></text>

@@ -6,33 +6,21 @@ Page({
     totalNum: 0, // 总数量，初始为0
     selectAllStatus: true, // 全选状态，默认全选
   },
-  onLoad: function () {
-    this.setData({
-      hasList: true,
-      carts: [{
-        id: 1,
-        title: '连衣裙',
-        image: '../../images/p1.png',
-        num: 1,
-        price: '36',
-        selected: true
-      }, {
-        id: 2,
-        title: '少女装',
-        image: '../../images/p2.png',
-        num: 2,
-        price: '68',
-        selected: true
-      }, {
-        id: 2,
-        title: '小清新',
-        image: '../../images/p3.png',
-        num: 1,
-        price: '48',
-        selected: true
-      }]
-    });
-    this.getTotalPrice();
+  onShow: function () {
+    let that = this;
+    let value = wx.getStorageSync('proIntro');
+    if (value) {
+      wx.getStorage({
+        key: 'proIntro',
+        success: function (res) {
+          that.setData({
+            hasList: true,
+            carts: res.data
+          })
+          that.getTotalPrice();
+        }
+      })
+    }
   },
   // 选择事件
   selectList: function (e) {
@@ -45,6 +33,7 @@ Page({
       selectAllStatus: false
     });
     this.getTotalPrice();
+    this.updataCache();
   },
   // 全选事件
   selectAll: function (e) {
@@ -59,6 +48,7 @@ Page({
       carts: carts
     });
     this.getTotalPrice();
+    this.updataCache();
   },
   // 增加数量
   addCount: function (e) {
@@ -71,6 +61,7 @@ Page({
       carts: carts
     });
     this.getTotalPrice();
+    this.updataCache();
   },
   // 减少数量
   minusCount: function (e) {
@@ -86,23 +77,16 @@ Page({
       carts: carts
     });
     this.getTotalPrice();
+    this.updataCache();
   },
-  // 计算总价
-  getTotalPrice: function () {
-    let carts = this.data.carts; // 获取购物车列表
-    let total = 0;
-    let num = 0;
-    for (let i = 0; i < carts.length; i++) { // 循环列表得到每个数据
-      if (carts[i].selected) { // 判断选中才会计算价格
-        total += carts[i].num * carts[i].price; // 所有价格加起来
-        num += carts[i].num; //所有商品加起来
-      }
+  //判断购物车有没有产品
+  cartLength: function () {
+    let carts = this.data.carts;
+    if (!carts.length) {
+      this.setData({
+        hasList: false // 修改标识为false，显示购物车为空页面
+      });
     }
-    this.setData({ // 最后赋值到data中渲染到页面
-      carts: carts,
-      totalPrice: total.toFixed(2),
-      totalNum: num
-    });
   },
   // 删除商品
   deleteList: function (e) {
@@ -121,15 +105,35 @@ Page({
         });
         that.getTotalPrice();
         that.cartLength();
+        that.updataCache();
       }
     })
   },
-  //判断购物车有没有产品
-  cartLength: function () {
-    let carts = this.data.carts;
-    if (!carts.length) {
-      this.setData({
-        hasList: false // 修改标识为false，显示购物车为空页面
+  // 计算总价
+  getTotalPrice: function () {
+    let carts = this.data.carts; // 获取购物车列表
+    let total = 0;
+    let num = 0;
+    for (let i = 0; i < carts.length; i++) { // 循环列表得到每个数据
+      if (carts[i].selected) { // 判断选中才会计算价格
+        total += carts[i].num * carts[i].price; // 所有价格加起来
+        num += carts[i].num; //所有商品加起来
+      }
+    }
+    this.setData({ // 最后赋值到data中渲染到页面
+      carts: carts,
+      totalPrice: total.toFixed(2),
+      totalNum: num
+    });
+  },
+  // 更新缓存
+  updataCache: function () {
+    let carts = this.data.carts; //获取购物车列表
+    let crtList = wx.getStorageSync('proIntro');
+    if (crtList) {
+      wx.setStorage({
+        key: "proIntro",
+        data: carts
       });
     }
   },
