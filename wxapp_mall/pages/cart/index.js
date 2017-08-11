@@ -119,10 +119,10 @@ Page({
         that.setData({
           carts: carts
         });
+        that.getTotalPrice();
+        that.cartLength();
       }
     })
-    that.getTotalPrice();
-    that.cartLength();
   },
   //判断购物车有没有产品
   cartLength: function () {
