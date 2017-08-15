@@ -6,7 +6,7 @@ Page({
       phone: ''
     }
   },
-  onLoad: function () {
+  onShow: function () {
     let that = this;
     var value = wx.getStorageSync('user');
     if (value) {
@@ -15,17 +15,6 @@ Page({
         success: function (res) {
           that.setData({
             user: res.data
-          })
-        }
-      })
-    } else {
-      
-      // 获取个人信息
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            'user.name': res.userInfo.nickName,
-            'user.thumb': res.userInfo.avatarUrl
           })
         }
       })
