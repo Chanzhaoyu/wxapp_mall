@@ -81,32 +81,57 @@ Page({
   },
   // 添加商品到缓存
   goods_add_cart: function () {
-    let proIntro = wx.getStorageSync('proIntro');
     let that = this;
-    let total = that.data.default_number;
-    let intro = that.data.pro;
-    let cache = {
+    let proIntro = wx.getStorageSync('proIntro'); //缓存
+    let total = that.data.default_number; //选取的个数
+    let intro = that.data.pro; //产品信息
+    let cache = {}; //单个产品对象
+
+    // 填充对象
+    cache = {
       id: intro.id,
       title: intro.title,
       image: intro.image,
       price: intro.price,
       num: total,
       selected: true
-    };
+    }
 
-    proIntro ? proIntro = proIntro : proIntro = [];
-    proIntro.push(cache);
+    // 判断有没有缓存
+    if (proIntro) {
+      let isExits = false;
+      proIntro.forEach(function (element, index, arr) {
+        //判断当前产品页产品 ID 是否存在于缓存中
+        if (arr[index].id === cache.id) {
+          isExits = true;
+          arr[index].num = arr[index].num + cache.num;
+          that.setCache('proIntro', proIntro);
+        }
+      })
+      if (!isExits) {
+        // 如果不存在相同产品，则直接在后面添加
+        proIntro.push(cache);
+        that.setCache('proIntro', proIntro);
+      }
+    } else {
+      // 如果不存在缓存，则新建一个缓存
+      proIntro = [];
+      proIntro.push(cache);
+      that.setCache('proIntro', proIntro);
+    }
 
+  },
+  setCache: function (key, value) {
+    let that = this;
     wx.setStorage({
-      key: "proIntro",
-      data: proIntro
-    });
-
-    wx.showToast({
-      title: '添加成功',
-      icon: 'success',
-      duration: 2000,
+      key: key,
+      data: value,
       success: function () {
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 2000
+        })
         that.setData({
           toggle: false
         })
